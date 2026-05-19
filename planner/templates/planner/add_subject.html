@@ -1,0 +1,23 @@
+{% extends 'planner/base.html' %}
+
+{% block content %}
+
+<div class="card shadow-sm">
+    <div class="card-body">
+
+        <h2 class="mb-4">Add Subject</h2>
+
+        <form method="POST">
+            {% csrf_token %}
+
+            {{ form.as_p }}
+
+            <button class="btn btn-success">
+                Save
+            </button>
+        </form>
+
+    </div>
+</div>
+
+{% endblock %}
